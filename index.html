@@ -1,39 +1,119 @@
 <!DOCTYPE html>
 <html lang="sk">
-<head>
-    <meta charset="UTF-8">
-    <title>Moja prvá stránka</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            text-align: center;
-            padding: 50px;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <title>Bakalárska práca</title>
 
-        h1 {
-            color: #333;
-        }
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
+        <link rel="stylesheet" href="styly.css">
+    </head>
+    <body>
+        <div class="headline">
+            Spracovanie Dokumentácie k Poistným Udalostiam
+        </div>
 
-    <h1>Ahoj svet 👋</h1>
-    <p>Toto je moja prvá HTML stránka.</p>
+        <div class="navbar">
+            <button class="navbar_button" onclick="location.href='#informacie'">
+                Informácie
+            </button>
+            <button class="navbar_button" onclick="location.href='#zadanie'">
+                Zadanie
+            </button>
+            <button class="navbar_button" onclick="location.href='#dennik'">
+                Denník
+            </button>
+            <button class="navbar_button" onclick="location.href='#zdroje'">
+                Zdroje
+            </button>
+        </div>
 
-    <button onclick="pozdrav()">Klikni ma</button>
+        <div class="body_divs_container">
+            <div id="informacie" class="information_container">
+                <div class="information_inside">
+                    <h1>
+                        Informácie
+                    </h1>
+                    <p>
+                        <span class="text_highlight">Meno:</span> Boris Bahýl
+                    </p>
+                    <p>
+                        <span class="text_highlight">Názov práce:</span> Spracovanie Dokumentácie k Poistným Udalostiam
+                    </p>
+                    <p>
+                        <span class="text_highlight">Školiteľ:</span> Ing. Viktor Kocur, PhD.
+                    </p>
+                    <p>
+                        <span class="text_highlight">Kontakt:</span> bahyl3@uniba.sk
+                    </p>
+                </div>
+            </div>
 
-    <script>
-        function pozdrav() {
-            alert("Funguje to!");
-        }
-    </script>
+            <div id="zadanie" class="assignment_container">
+                <div class="assignemnt_inside">
+                    <h1>
+                        Zadanie
+                    </h1>
+                    <p>
+                        <span class="text_highlight">Anotácia:</span>
+                        <br> Po vzniku škodovej udalosti potrebujú klienti dodať poisťovniam
+                            dokumentáciu. Často dochádza k tomu, že v dodaných dokumentoch sa nachádzajú
+                            rôzne druhy dát. Pre následné spracovanie je potrebné dáta anotovať do rôznych
+                            kategórií a v niektorých prípadoch odstrániť citlivé údaje. Táto práca je realizovaná
+                            v kontexte projektu InnovAIte v spolupráci s firmou Gratex International.
+                    </p>
+                    <p>
+                        <span class="text_highlight">Cieľ práce:</span>
+                        <br> 1. Spracovať prehľad problematiky vzhľadom na potreby poisťovní a možných riešení
+                            existujúcimi metódami.
+                        <br> 2. Zvoliť vhodný dataset na vyhodnotenie a prípadné trénovanie úlohy klasifikácie
+                            dokumentov.
+                        <br> 3. Navrhnúť a implementovať metódy na klasifikáciu dokumentov.
+                        <br> 4. Vyhodnotiť metódy z hľadiska presnosti aj využiteľnosti v praxi.
+                    </p>
+                </div>
+            </div>
 
-</body>
+            <div id="dennik" class="diary_container">
+                <div class="diary_inside">
+                    <h1>
+                        Denník
+                    </h1>
+                    <div class="diary_item">
+                        <div class="diary_item_inside">
+                            <p>
+                                <span class="text_highlight">1. týždeň (16.2. - 22.2.)</span> 
+                                <ul>
+                                    <li>
+                                        Spracovanie teoretickej problematiky o existujúcich metódach rozpoznávania textu z vizuálnych dát.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="diary_item_inside">
+                            <p>
+                                <span class="text_highlight">2. týždeň (23.2. - 1.3.)</span> 
+                                <ul>
+                                    <li>
+                                        Vytvorenie osobnej webovej stránky pre účely bakalárskeho semináru.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="zdroje" class="resources_container">
+                <div class="resources_inside">
+                    <h1>
+                        Zdroje
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </body>
 </html>
