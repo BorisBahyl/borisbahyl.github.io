@@ -8,7 +8,6 @@ body
     margin: 0;
     font-family: 'Rubik', sans-serif;
     background-color: #3E5F44;
-    height: 9000px;
 }
 
 h1 
@@ -112,4 +111,15 @@ h1
     padding-right: 2%;
 
     scroll-margin-top: 70px;
+}
+
+@media (max-width: 768px)
+{
+    .information_container, 
+    .assignment_container,
+    .diary_container,
+    .resources_container
+    {
+        width: 86%;
+    }
 }
