@@ -33,6 +33,14 @@ h1
     color: #E8FFD7;
 }
 
+@media (max-width: 768px)
+{
+    .headline 
+    {
+        font-size: 1.8rem;
+    }
+}
+
 .navbar 
 {
     background-color: #5E936C;
