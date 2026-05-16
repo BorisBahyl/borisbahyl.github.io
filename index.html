@@ -9,6 +9,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="styly.css">
+        <!-- 1. Načítanie BibTeX-JS knižnice -->
+        <script src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.js"></script>
     </head>
     <body>
         <div class="headline">
@@ -24,6 +26,9 @@
             </button>
             <button class="navbar_button" onclick="location.href='#dennik'">
                 Denník
+            </button>
+            <button class="navbar_button" onclick="location.href='#galeria'">
+                Galéria
             </button>
             <button class="navbar_button" onclick="location.href='#zdroje'">
                 Zdroje
@@ -47,6 +52,13 @@
                     </p>
                     <p>
                         <span class="text_highlight">Kontakt:</span> bahyl3@uniba.sk
+                    </p>
+                    <p>
+                        <span class="text_highlight">Dokument:</span> 
+                        <a href="https://borisbahyl.github.io/doposial_napisana_bp-compressed.pdf" target="_blank" 
+                            rel="noopener noreferrer">
+                            Otvoriť PDF
+                        </a>
                     </p>
                 </div>
             </div>
@@ -153,7 +165,138 @@
                                 </ul>
                             </p>
                         </div>
+                        <div class="diary_item_inside">
+                            <p>
+                                <span class="text_highlight">7. týždeň (30.3. - 5.4.)</span> 
+                                <ul>
+                                    <li>
+                                        Meeting a konzultácia so škoiteľom.
+                                        Oboznámenie sa s knižnicou <i>Vismatch</i>, ktorá ponúka
+                                        široký výber párovacích algoritmov, ktoré následne použijeme 
+                                        v práci.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="diary_item_inside">
+                            <p>
+                                <span class="text_highlight">8. týždeň (6.4. - 12.4.)</span> 
+                                <ul>
+                                    <li>
+                                        Zbieranie ďalších snímok do datasetu, zameraných na 
+                                        špecifické prípady, kedy hlavnú časť scény tvoria automobily.
+                                        Testovanie rôznych párovacích algoritmov z knižnice <i>Vismatch</i>.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="diary_item_inside">
+                            <p>
+                                <span class="text_highlight">9. týždeň (13.4. - 19.4.)</span> 
+                                <ul>
+                                    <li>
+                                        Rozširovanie datasetu o ďalšie snímky.
+                                        Dokončené spracovanie teoretických podkladov problematiky 
+                                        a spísanie kompletnej teoretickej časti bakalárkskej práce.
+                                        Konzultácia teoretickej časti so školiteľom.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="diary_item_inside">
+                            <p>
+                                <span class="text_highlight">10. týždeň (20.4. - 26.4.)</span> 
+                                <ul>
+                                    <li>
+                                        Rozširovanie datasetu o ďalšie snímky.
+                                        Zapracovanie poznámok od školiteľa ku teoretickej časti 
+                                        bakalárskej práce.
+                                        Oboznámenie sa s funkcionalitou techniky <i>CosPlace</i>, ktorá využíva
+                                        na párovanie globálne deskriptory a slúži nám ako baseline
+                                        pre porovnanie presnosti a výkonnosti nami zvoleného postupu. 
+                                        Zapracovanie <i>CosPlace</i> do 
+                                        pipeline párovania snímok spolu s technikami lokálneho párovania.
+                                        Postupné spúšťanie párovacích algoritmov pre zisk výsledkov do
+                                        záverečného porovnania.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="diary_item_inside">
+                            <p>
+                                <span class="text_highlight">11. týždeň (27.4. - 3.5.)</span> 
+                                <ul>
+                                    <li>
+                                        Meeting a konzultácia so školiteľom.
+                                        Doplnenie snímok za nočných svetelných podmienok 
+                                        do datasetu, ktoré slúžia ako edge test cases.
+                                        Kompletizácia a antotácia všetkých snímok datasetu do 
+                                        jednej finálnej štruktúry vo formáte JSON.
+                                        Finalizovanie celkovej štruktúry a funkcionality prototypu
+                                        praktickej časti a jej následné konzultovanie so školiteľom.
+                                        Postupné spúšťanie párovacích algoritmov pre zisk výsledkov do
+                                        záverečného porovnania.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="diary_item_inside">
+                            <p>
+                                <span class="text_highlight">12. týždeň (4.5. - 10.5.)</span> 
+                                <ul>
+                                    <li>
+                                        Spísanie kapitol praktickej časti o datasete a celkovej implementácii, 
+                                        a ich následné konzultovanie so školiteľom.
+                                        Postupné spúšťanie párovacích algoritmov pre zisk výsledkov do
+                                        záverečného porovnania.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                         <div class="diary_item_inside">
+                            <p>
+                                <span class="text_highlight">13. týždeň (11.5. - 17.5.)</span> 
+                                <ul>
+                                    <li>
+                                        Finalizovanie zberu výsledkov párovacích algoritmov a ich spracovanie
+                                        pre účely celkového záverečného porovnania.
+                                        Výpočet presnosti jednotlivých párovacích algoritmov pomocou vlastného
+                                        MLP klasifikátora spolu s AutoML nástrojom <i>FLAML</i>.
+                                        Výpočet <i>CosPlace</i> baseline podobným spôsobom pomocou thresholdingu,
+                                        ktorý slúži na porovnanie presnosti a výkonnosti párovaní.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            <div id="galeria" class="information_container">
+                <div class="resources_inside">
+                    <h1>Galéria</h1>
+                    
+                    <!-- ZAČIATOK KÓDU PRE GALÉRIU -->
+                    <div class="gallery-slider">
+                        <!-- Tlačidlo pre predchádzajúci obrázok -->
+                        <button class="slider-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+                        
+                        <!-- Kontajner pre obrázky -->
+                        <div class="slide-container">
+                            <!-- Prvý obrázok má triedu "active", aby sa zobrazil ako prvý -->
+                            <img class="slide active" src="https://borisbahyl.github.io/porovnanie_matcherov.png" alt="Obrázok 1">
+                            <img class="slide" src="https://borisbahyl.github.io/obrazok_14.png" alt="Obrázok 2">
+                            <img class="slide" src="https://borisbahyl.github.io/obrazok_15.png" alt="Obrázok 3">
+                            <img class="slide" src="https://borisbahyl.github.io/obrazok_16.png" alt="Obrázok 4">
+                            <img class="slide" src="https://borisbahyl.github.io/obrazok_12.png" alt="Obrázok 5">
+                            <img class="slide" src="https://borisbahyl.github.io/eloftr_noc_den.png" alt="Obrázok 6">
+                        </div>
+                        
+                        <!-- Tlačidlo pre nasledujúci obrázok -->
+                        <button class="slider-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+                    </div>
+                    <!-- KONIEC KÓDU PRE GALÉRIU -->
+
                 </div>
             </div>
 
@@ -162,9 +305,206 @@
                     <h1>
                         Zdroje
                     </h1>
+                    <p>
+                        <ul>
+                            <li>
+                                <p>
+                                    [1] Relja Arandjelovic, Petr Gronat, Akihiko Torii, Tomas Pajdla, and Josef Sivic.
+                                    Netvlad: Cnn architecture for weakly supervised place recognition. In Proceedings
+                                    of the IEEE conference on computer vision and pattern recognition, pages 5297–5307, 2016.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [2] Gabriele Berton, Gabriele Goletto, Gabriele Trivigno, Alex Stoken, Barbara Caputo, 
+                                    and Carlo Masone. Earthmatch: Iterative coregistration for fine-grained
+                                    localization of astronaut photography. In Proceedings of the IEEE/CVF Conference 
+                                    on Computer Vision and Pattern Recognition (CVPR) Workshops, June 2024.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [3] Gabriele Berton, Carlo Masone, and Barbara Caputo. Rethinking visual 
+                                    geo-localization for large-scale applications. In IEEE/CVF Conference on Computer
+                                    Vision and Pattern Recognition, pages 4878–4888, June 2022.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [4] Irving Biederman. Recognition-by-components: a theory of human image 
+                                    understanding. Psychological review, 94(2):115, 1987.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [5] Leo Breiman. Random forests. Machine learning, 45(1):5–32, 2001.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [6] Tianqi Chen and Carlos Guestrin. Xgboost: A scalable tree boosting system. In
+                                    Proceedings of the 22nd acm sigkdd international conference on knowledge discovery 
+                                    and data mining, pages 785–794, 2016.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [7] Daniel DeTone, Tomasz Malisiewicz, and Andrew Rabinovich. Superpoint: Self-supervised 
+                                    interest point detection and description. In Proceedings of the IEEE conference on 
+                                    computer vision and pattern recognition workshops, pages 224–236, 2018.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [8] Johan Edstedt, Qiyu Sun, Georg Bökman, Mårten Wadenbäck, and Michael Felsberg. 
+                                    Roma: Robust dense feature matching. In Proceedings of the IEEE/CVF conference on 
+                                    computer vision and pattern recognition, pages 19790–19800, 2024.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [9] Richard Hartley and Andrew Zisserman. Multiple view geometry in computer
+                                    vision. Cambridge university press, 2003.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [10] Mahmoud Hassaballah, Aly Amin Abdelmgeid, and Hammam A Alshazly. Image
+                                    features detection, description and matching. In Image Feature Detectors and
+                                    Descriptors: Foundations and Applications, pages 11–45. Springer, 2016.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [11] Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei
+                                    Ye, and Tie-Yan Liu. Lightgbm: A highly efficient gradient boosting decision tree.
+                                    Advances in neural information processing systems, 30, 2017.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [12] Philipp Lindenberger, Paul-Edouard Sarlin, and Marc Pollefeys. Lightglue: Local
+                                    feature matching at light speed. In Proceedings of the IEEE/CVF international
+                                    conference on computer vision, pages 17627–17638, 2023.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [13] David G Lowe. Distinctive image features from scale-invariant keypoints. 
+                                    International journal of computer vision, 60(2):91–110, 2004.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [14] Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory 
+                                    Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, et al.
+                                    Pytorch: An imperative style, high-performance deep learning library. Advances
+                                    in neural information processing systems, 32, 2019.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [15] Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand 
+                                    Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss,
+                                    Vincent Dubourg, et al. Scikit-learn: Machine learning in python. The Journal of
+                                    machine Learning research, 12:2825–2830, 2011.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [16] Guilherme Potje, Felipe Cadar, André Araujo, Renato Martins, and Erickson R
+                                    Nascimento. Xfeat: Accelerated features for lightweight image matching. In Proceedings 
+                                    of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 2682–2691, 2024.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [17] Ethan Rublee, Vincent Rabaud, Kurt Konolige, and Gary Bradski. Orb: An efficient 
+                                    alternative to sift or surf. In 2011 International conference on computer vision, 
+                                    pages 2564–2571. Ieee, 2011.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [18] Paul-Edouard Sarlin, Cesar Cadena, Roland Siegwart, and Marcin Dymczyk. From
+                                    coarse to fine: Robust hierarchical localization at large scale. In Proceedings of the
+                                    IEEE/CVF conference on computer vision and pattern recognition, pages 12716–12725, 2019.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [19] Paul-Edouard Sarlin, Daniel DeTone, Tomasz Malisiewicz, and Andrew Rabinovich. 
+                                    Superglue: Learning feature matching with graph neural networks. In Proceedings 
+                                    of the IEEE/CVF conference on computer vision and pattern recognition, pages 4938–4947, 2020.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [20] Jiaming Sun, Zehong Shen, Yuang Wang, Hujun Bao, and Xiaowei Zhou. Loftr:
+                                    Detector-free local feature matching with transformers. In Proceedings of the
+                                    IEEE/CVF conference on computer vision and pattern recognition, pages 8922–8931, 2021.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [21] Tinne Tuytelaars and Krystian Mikolajczyk. Local invariant feature detectors: a
+                                    survey. Foundations and trends in computer graphics and vision, 3(3):177–280, 2008.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [22] Michał Tyszkiewicz, Pascal Fua, and Eduard Trulls. Disk: Learning local
+                                    features with policy gradient. Advances in neural information processing systems,
+                                    33:14254–14265, 2020.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [23] Chi Wang, Qingyun Wu, Markus Weimer, and Erkang Zhu. Flaml: A fast and
+                                    lightweight automl library. Proceedings of machine learning and systems, 3:434–447, 2021.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    [24] Xiaoming Zhao, Xingming Wu, Weihai Chen, Peter CY Chen, Qingsong Xu, and
+                                    Zhengguo Li. Aliked: A lighter keypoint and descriptor extraction network via
+                                    deformable transformation. IEEE Transactions on Instrumentation and Measurement,
+                                    72:1–16, 2023.
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
                 </div>
             </div>
         </div>
 
+
+        <script>
+            let currentSlideIndex = 0;
+
+            function changeSlide(direction) {
+                // Načítame všetky obrázky s triedou 'slide'
+                const slides = document.querySelectorAll('.slide');
+                
+                // Schováme aktuálne zobrazený obrázok
+                slides[currentSlideIndex].classList.remove('active');
+                
+                // Vypočítame nový index obrázka
+                currentSlideIndex += direction;
+                
+                // Ak sme na konci a klikneme ďalej, skočíme na prvý obrázok
+                if (currentSlideIndex >= slides.length) {
+                    currentSlideIndex = 0;
+                }
+                
+                // Ak sme na začiatku a klikneme späť, skočíme na posledný obrázok
+                if (currentSlideIndex < 0) {
+                    currentSlideIndex = slides.length - 1;
+                }
+                
+                // Zobrazíme nový obrázok pridaním triedy 'active'
+                slides[currentSlideIndex].classList.add('active');
+            }
+        </script>
     </body>
 </html>

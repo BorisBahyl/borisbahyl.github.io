@@ -17,8 +17,6 @@ h1
     font-weight: 600;
 }
 
-
-
 .headline 
 {
     top: 0;
@@ -63,6 +61,8 @@ h1
 
     padding-top: 5px;
     padding-bottom: 5px;
+
+    z-index: 1000;
 }
 
 .navbar_button
@@ -131,3 +131,95 @@ h1
         width: 86%;
     }
 }
+
+/* ==========================================
+   NOVÉ ŠTÝLY PRE PREKLIKÁVACIU GALÉRIU
+   ========================================== */
+
+/* Zabezpečí, aby vnútorný obsah vyplnil celú šírku zeleného kontajnera */
+.resources_inside 
+{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+/* Kontajner pre slider - teraz má 100% šírku, takže šípky zostanú pevne na krajoch */
+.gallery-slider 
+{
+    position: relative;
+    width: 100%;           /* Roztiahne sa na celú šírku tvojho zeleného boxu */
+    margin: 15px 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Vycentruje obrázok presne v strede medzi šípkami */
+}
+
+/* Rámček okolo obrázkov - prispôsobí sa obrázku, ale neprekryje šípky */
+.slide-container 
+{
+    width: fit-content;    /* Rámček sa stiahne presne podľa šírky obrázka */
+    
+    /* Rezerva pre šípky po bokoch, aby široký obrázok do nich nenarážal */
+    max-width: calc(100% - 120px); 
+    
+    overflow: hidden;
+    border: 2px solid #93DA97;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+/* Samotný obrázok */
+.slide 
+{
+    display: none;         /* Obrázky sú predvolene skryté */
+    max-width: 100%;       
+    max-height: 450px;     /* Maximálna výška obrázka */
+    width: auto;           
+    height: auto;          
+}
+
+/* Zobrazenie aktívneho obrázka */
+.slide.active 
+{
+    display: block;
+    animation: fadeEffect 0.4s ease-in-out;
+}
+
+@keyframes fadeEffect 
+{
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+/* Smerové šípky - sú absolútne k veľkému boxu, takže sa ani nepohnú */
+.slider-btn 
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Dokonalé centrovanie na stred po výške */
+    
+    background-color: rgba(62, 95, 68, 0.7); 
+    color: #E8FFD7; 
+    
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 5px;
+    z-index: 10;
+    
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover efekt šípok s udržaním centrovania na stred */
+.slider-btn:hover 
+{
+    background-color: rgba(62, 95, 68, 0.95);
+    transform: translateY(-50%) scale(0.9);
+}
+
+/* Šípky sú fixne nalepené na úplných krajoch tvojho informačného kontajnera */
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
